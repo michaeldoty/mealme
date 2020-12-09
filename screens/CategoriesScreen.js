@@ -6,7 +6,7 @@ import CategoriesGridTile from '../components/CategoriesGridTile';
 import Colors from '../constants/colors';
 
 
-
+//landing screen for the app
 const CategoriesScreen = props => {
 
   const renderGridItem = (itemData) => {

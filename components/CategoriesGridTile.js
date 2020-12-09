@@ -1,6 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, View, Text, StyleSheet, Platform, TouchableNativeFeedback } from 'react-native';
 
+//main component for the CategoriesScreen displaying grid of meal categories
 const CategoryGridTile = props => {
   let TouchableCmp = TouchableOpacity;
 

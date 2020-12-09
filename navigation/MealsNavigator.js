@@ -7,6 +7,7 @@ import { Platform } from 'react-native';
 
 import Colors from '../constants/colors';
 
+//StackNavigtaion component which handles the traversing of cards
 const MealsNavigator = createStackNavigator({
   Categories: CategoriesScreen,
   CategoryMeals: {
