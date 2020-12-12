@@ -28,6 +28,7 @@ const MealsNavigator = createStackNavigator({
   }
 });
 
+// function to configure the general tab screen config
 const tabScreenConfig = {
   Meals: {
     screen: MealsNavigator, navigationOptions: {
