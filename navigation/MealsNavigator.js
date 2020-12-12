@@ -8,6 +8,7 @@ import MealDetailScreen from '../screens/MealDetailScreen';
 import { Platform } from 'react-native';
 import FavoritesScreen from '../screens/FavoritesScreen';
 import { Ionicons } from '@expo/vector-icons';
+// import Material Bottom Tab Navigator for Android styling - ios is default
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 
 import Colors from '../constants/colors';
