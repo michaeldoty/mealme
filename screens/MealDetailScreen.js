@@ -23,7 +23,6 @@ const MealDetailScreen = props => {
 MealDetailScreen.navigationOptions = (navigationData) => {
   const mealId = navigationData.navigation.getParam('mealId');
   const selectedMeal = MEALS.find(meal => meal.id === mealId);
-  console.log('selectedMeal id', selectedMeal);
   return {
     headerTitle: selectedMeal.title,
     headerRight: <HeaderButtons HeaderButtonComponent={HeaderButton}>
