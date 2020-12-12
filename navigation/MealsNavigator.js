@@ -49,7 +49,7 @@ const tabScreenConfig = {
     }
   }
 }
-
+// depending on the platform this will add additional config options
 const MealsFavTabNavigator = Platform.OS === 'android'
   ? createMaterialBottomTabNavigator(tabScreenConfig, {
     activeColor: 'white',
