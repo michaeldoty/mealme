@@ -12,7 +12,7 @@ import { createMaterialBottomTabNavigator } from 'react-navigation-material-bott
 
 import Colors from '../constants/colors';
 
-//StackNavigtaion component which handles the traversing of cards
+// StackNavigtaion component which handles the traversing of cards
 const MealsNavigator = createStackNavigator({
   Categories: CategoriesScreen,
   CategoryMeals: {
@@ -65,4 +65,5 @@ const MealsFavTabNavigator = Platform.OS === 'android'
   }
   );
 
+// set the tab navigator as the root with the stack navigators within it
 export default createAppContainer(MealsFavTabNavigator);
