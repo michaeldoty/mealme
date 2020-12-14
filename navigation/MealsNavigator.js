@@ -12,6 +12,16 @@ import { Ionicons } from '@expo/vector-icons';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 
 import Colors from '../constants/colors';
+import defaultIcon from 'react-native-paper/lib/typescript/src/components/MaterialCommunityIcon';
+
+const defaultStackNavOptions = {
+  defaultNavigationOptions: {
+    headerStyle: {
+      backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : 'white'
+    },
+    headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor
+  }
+};
 
 // StackNavigtaion component which handles the traversing of cards
 const MealsNavigator = createStackNavigator({
@@ -21,12 +31,14 @@ const MealsNavigator = createStackNavigator({
   },
   Meal_Details: MealDetailScreen
 }, {
-  defaultNavigationOptions: {
-    headerStyle: {
-      backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : 'white'
-    },
-    headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor
-  }
+  defaultNavigationOptions: defaultStackNavOptions
+});
+
+const FavNavigator = createStackNavigator({
+  Favorites: FavoritesScreen,
+  MealDetail: MealDetailScreen
+}, {
+  defaultNavigationOptions: defaultStackNavOptions
 });
 
 // function to configure the general tab screen config
@@ -41,7 +53,7 @@ const tabScreenConfig = {
     tabBarColor: 'white'
   },
   Favorites: {
-    screen: FavoritesScreen, navigationOptions: {
+    screen: FavNavigator, navigationOptions: {
       tabBarLabel: 'Favorites',
       tabBarIcon: (tabInfo) => {
         return <Ionicons name='ios-star' size={25} color={tabInfo.tintColor} />
