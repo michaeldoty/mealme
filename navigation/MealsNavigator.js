@@ -82,11 +82,24 @@ const MealsFavTabNavigator = Platform.OS === 'android'
 
 const FiltersNavigator = createStackNavigator({
   Filters: FiltersScreen
-});
+},
+  {
+    defaultNavigationOptions: defaultStackNavOptions
+  }
+);
 
 const MainNavigator = createDrawerNavigator({
-  MealsFavs: MealsFavTabNavigator,
+  MealsFavs: {
+    screen: MealsFavTabNavigator, navigationOptions: { drawerLabel: 'Meals' }
+  },
   Filters: FiltersNavigator
+}, {
+  contentOptions: {
+    activeTintColor: Colors.accentColor,
+    labelStyle: {
+      fontFamily: 'open-sans-bold'
+    }
+  }
 });
 
 // set the tab navigator as the root with the stack navigators within it
