@@ -15,19 +15,19 @@ import { createMaterialBottomTabNavigator } from 'react-navigation-material-bott
 
 import Colors from '../constants/colors';
 
-
 const defaultStackNavOptions = {
-  defaultNavigationOptions: {
-    headerStyle: {
-      backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : 'white'
-    },
-    headerTitleStyle: {
-      fontFamily: 'open-sans-bold'
-    },
-    headerBackTitleStyle: {
-      fontFamily: 'open-sans'
-    },
-    headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor
+  headerStyle: {
+    backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : '',
+  },
+  headerTitleStyle: {
+    fontFamily: 'open-sans-bold'
+  },
+  headerBackTitleStyle: {
+    fontFamily: 'open-sans'
+  },
+  headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor,
+  headerTitleAlign: {
+    textAlign: 'center',
   }
 };
 
