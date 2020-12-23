@@ -19,7 +19,7 @@ const FilterSwitch = props => {
 
 }
 
-const dispatch = useDispatch();
+
 
 
 const FiltersScreen = props => {
@@ -30,6 +30,8 @@ const FiltersScreen = props => {
   const [isVegan, setIsVegan] = useState(false);
   const [isVegetarian, setIsVegetarian] = useState(false);
 
+  const dispatch = useDispatch();
+
   const saveFilters = useCallback(() => {
     const appliedFilters = {
       glutenFree: isGlutenFree,
@@ -37,6 +39,7 @@ const FiltersScreen = props => {
       vegan: isVegan,
       vegetarian: isVegetarian
     };
+    console.log(appliedFilters);
     dispatch(setFilters(appliedFilters));
   }, [isGlutenFree, isLactoseFree, isVegan, isVegetarian, dispatch])
 
