@@ -7,7 +7,7 @@ const initialState = {
   favoriteMeals: []
 };
 
-df
+
 
 const mealsReducer = (state = initialState, action) => {
   switch (action.type) {
